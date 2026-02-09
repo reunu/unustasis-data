@@ -1,0 +1,70 @@
+name: Outdated Garage Information
+description: Report incorrect or outdated information for a service partner garage
+title: "[Garage Update]: "
+labels: ["garage-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep our garage data accurate! Please provide as much detail as possible.
+
+  - type: input
+    id: garage-name
+    attributes:
+      label: Garage Name
+      description: The current name of the garage in the app
+      placeholder: e.g., Fa. Wilhelm Fahrzeugtechnik
+    validations:
+      required: true
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Type of Update
+      description: What kind of change is needed?
+      options:
+        - Incorrect information (name, address, phone, etc.)
+        - Garage has closed / no longer services unu scooters
+        - New garage not in the list
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: Correct Information
+      description: |
+        Please provide the correct/updated information. Include as many details as possible:
+        - Name
+        - Street address
+        - Postal code and city
+        - Country
+        - Phone number (international format preferred, e.g., +49 30 1234567)
+        - GPS coordinates (if available)
+      placeholder: |
+        Name: Fa. Wilhelm Zweiradtechnik
+        Address: General-Pape-Straße 8, 12101 Berlin, Germany
+        Phone: +49 175 222 99 77
+        GPS: 52.47627980463747, 13.367350417613736
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: How did you verify this information?
+      description: |
+        Help us trust this information by explaining how you verified it
+        (e.g., website, phone call, visited in person, Google Maps)
+      placeholder: Verified via their website and Google Maps listing
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: They recently moved locations / changed their name / etc.
+    validations:
+      required: false

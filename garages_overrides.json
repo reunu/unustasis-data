@@ -1,7 +1,10 @@
 [
   {
-    "originalName": "Fa. Wilhelm Fahrzeugtechnik",
-    "override": {
+    "operation": "update",
+    "match": {
+      "name": "Fa. Wilhelm Fahrzeugtechnik"
+    },
+    "garage": {
       "name": "Fa. Wilhelm Zweiradtechnik",
       "Phone": "+49 175 222 99 77",
       "ShippingCity": "Berlin",

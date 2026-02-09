@@ -31,14 +31,7 @@ jobs:
 
       - name: Apply overrides and generate merged file
         run: |
-          jq --slurpfile overrides garages_overrides.json '
-            . as $garages |
-            $overrides[0] as $ovr |
-            map(
-              . as $garage |
-              ($ovr[] | select(.originalName == $garage.name) | .override) // $garage
-            )
-          ' garages_upstream.json > garages.json
+          jq --slurpfile overrides garages_overrides.json -f merge-overrides.jq garages_upstream.json > garages.json
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
