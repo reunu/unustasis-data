@@ -15,6 +15,122 @@
       "ShippingLongitude": "13.367350417613736",
       "ShippingPostalCode": "12101",
       "status": ""
-    }
+    },
+    "reason": "Business rebranded from Fahrzeugtechnik to Zweiradtechnik. Updated name, address, phone, and GPS.",
+    "source": "Direct contact",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "BCS & Sen Automobile" },
+    "garage": {
+      "ShippingLatitude": "47.7366",
+      "ShippingLongitude": "9.1735"
+    },
+    "reason": "Coordinates were in Alabama, USA (33.51, -86.84). Corrected to Konstanz, Germany.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/sen-konstanz/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Autohof Leinestraße GbR" },
+    "garage": {
+      "ShippingPostalCode": "04279"
+    },
+    "reason": "Postal code missing leading zero. Verified correct PLZ from business website.",
+    "source": "https://autohof-leinestrasse.de/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "BCS Mezger GmbH & Co. KG Leipzig" },
+    "garage": {
+      "ShippingPostalCode": "04179"
+    },
+    "reason": "Postal code missing leading zero. Verified correct PLZ from Bosch Car Service listing.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/mezger-leipzig/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "BCS Osse GmbH" },
+    "garage": {
+      "ShippingPostalCode": "07745"
+    },
+    "reason": "Postal code missing leading zero (Jena area).",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/osse-jena/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Bosch Car Service Bernburg - Daniel Zahn" },
+    "garage": {
+      "ShippingPostalCode": "06406"
+    },
+    "reason": "Postal code missing leading zero (Bernburg/Saxony-Anhalt area).",
+    "source": "https://www.boschcarservice.com/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Wöhrle GmbH" },
+    "garage": {
+      "ShippingStreet": "Heisinger Str. 19a"
+    },
+    "reason": "Street field contained 'Bosch Service' instead of actual address. Corrected from official listing.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/woehrle-kempten/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Insel Sylt Tourismus-Service GmbH - Werkstatt" },
+    "garage": {
+      "ShippingLatitude": "54.9079",
+      "ShippingLongitude": "8.3047"
+    },
+    "reason": "Coordinates were 0,0 (null). Corrected to Westerland/Sylt. NOTE: This appears to be a tourism office, not a vehicle workshop - may need removal.",
+    "source": "https://www.insel-sylt.de/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Schmucker & Lemli GmbH" },
+    "garage": {
+      "ShippingLatitude": "51.4374",
+      "ShippingLongitude": "8.0243"
+    },
+    "reason": "Coordinates were in Toledo, Ohio, USA (41.66, -83.67). Corrected to Arnsberg, Germany.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/schmuckerlemli-arnsberg/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Werkstatt BCS Karl Wahl Heide Inh. Ingo Dohrn" },
+    "garage": {
+      "ShippingStreet": "Hamburger Str. 43"
+    },
+    "reason": "Street field contained owner name 'Inh. Ingo Dohrn' instead of actual address.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/wahl-kalender/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Bosch Car Service Linn" },
+    "garage": {
+      "ShippingStreet": "Woogmorgen 6"
+    },
+    "reason": "Street field contained owner name 'Inhaber Marc Linn' instead of actual address.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/linn-kirchheimbolanden/",
+    "verified": "2026-02-09"
+  },
+  {
+    "operation": "update",
+    "match": { "name": "Theuerkauf GmbH" },
+    "garage": {
+      "ShippingStreet": "Hochstr. 48"
+    },
+    "reason": "Street field contained company name instead of actual address.",
+    "source": "https://www.boschcarservice.com/de/de/werkstatt/theuerkauf-ingelheim/",
+    "verified": "2026-02-09"
   }
 ]

@@ -15,6 +15,12 @@ $upstream |
 map(select(shouldRemove(.) | not)) |
 map(
   . as $garage |
-  ($ovr[] | select(.operation == "update") | select(matches(.; $garage)) | .garage) // $garage
+  # Find matching update override and merge with existing garage
+  ([$ovr[] | select(.operation == "update") | select(matches(.; $garage))][0]) as $override |
+  if $override then
+    $garage + $override.garage
+  else
+    $garage
+  end
 ) |
 . + ($ovr | map(select(.operation == "add") | .garage))

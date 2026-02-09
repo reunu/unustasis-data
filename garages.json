@@ -30,8 +30,8 @@
     "ShippingStreet": "Maybachstraße 4a",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
-    "ShippingLatitude": "33.5103162",
-    "ShippingLongitude": "-86.8421125",
+    "ShippingLatitude": "47.7366",
+    "ShippingLongitude": "9.1735",
     "ShippingPostalCode": "78467",
     "status": ""
   },
@@ -164,7 +164,7 @@
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "51.2869136",
     "ShippingLongitude": "12.4104243",
-    "ShippingPostalCode": "4279",
+    "ShippingPostalCode": "04279",
     "status": ""
   },
   {
@@ -428,7 +428,7 @@
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "51.3381955",
     "ShippingLongitude": "12.296894",
-    "ShippingPostalCode": "4179",
+    "ShippingPostalCode": "04179",
     "status": ""
   },
   {
@@ -440,7 +440,7 @@
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "50.8999645",
     "ShippingLongitude": "11.5853781",
-    "ShippingPostalCode": "7745",
+    "ShippingPostalCode": "07745",
     "status": ""
   },
   {
@@ -471,7 +471,7 @@
     "name": "Wöhrle GmbH",
     "Phone": "01636410736",
     "ShippingCity": "Kempten",
-    "ShippingStreet": "Bosch Service",
+    "ShippingStreet": "Heisinger Str. 19a",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "47.7619806",
@@ -536,7 +536,7 @@
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "51.7990758",
     "ShippingLongitude": "11.7732717",
-    "ShippingPostalCode": "6406",
+    "ShippingPostalCode": "06406",
     "status": ""
   },
   {
@@ -894,8 +894,8 @@
     "ShippingStreet": "Strandstr. 35",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
-    "ShippingLatitude": "0",
-    "ShippingLongitude": "0",
+    "ShippingLatitude": "54.9079",
+    "ShippingLongitude": "8.3047",
     "ShippingPostalCode": "25980",
     "status": ""
   },
@@ -1134,8 +1134,8 @@
     "ShippingStreet": "Cäcilienstr. 1",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
-    "ShippingLatitude": "41.6605666",
-    "ShippingLongitude": "-83.66804770000002",
+    "ShippingLatitude": "51.4374",
+    "ShippingLongitude": "8.0243",
     "ShippingPostalCode": "59759",
     "status": ""
   },
@@ -1167,7 +1167,7 @@
     "name": "Theuerkauf GmbH",
     "Phone": "061 329 8180",
     "ShippingCity": "Ingelheim am Rhein",
-    "ShippingStreet": "Theuerkauf GmbH",
+    "ShippingStreet": "Hochstr. 48",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "49.9878309",
@@ -1731,7 +1731,7 @@
     "name": "Werkstatt BCS Karl Wahl Heide Inh. Ingo Dohrn",
     "Phone": "00494815475",
     "ShippingCity": "Heide",
-    "ShippingStreet": "Inh. Ingo Dohrn",
+    "ShippingStreet": "Hamburger Str. 43",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "54.19517639999999",
@@ -1815,7 +1815,7 @@
     "name": "Bosch Car Service Linn",
     "Phone": "06352 / 3867",
     "ShippingCity": "Kirchheimbolanden",
-    "ShippingStreet": "Inhaber Marc Linn",
+    "ShippingStreet": "Woogmorgen 6",
     "ShippingCountry": "Germany",
     "ShippingCountryCode": "DE",
     "ShippingLatitude": "49.6612419",
