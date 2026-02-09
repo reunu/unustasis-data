@@ -1,0 +1,17 @@
+[
+  {
+    "originalName": "Fa. Wilhelm Fahrzeugtechnik",
+    "override": {
+      "name": "Fa. Wilhelm Zweiradtechnik",
+      "Phone": "+49 175 222 99 77",
+      "ShippingCity": "Berlin",
+      "ShippingStreet": "General-Pape-Straße 8",
+      "ShippingCountry": "Germany",
+      "ShippingCountryCode": "DE",
+      "ShippingLatitude": "52.47627980463747",
+      "ShippingLongitude": "13.367350417613736",
+      "ShippingPostalCode": "12101",
+      "status": ""
+    }
+  }
+]
