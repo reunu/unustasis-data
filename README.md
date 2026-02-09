@@ -1,48 +1,34 @@
 # unustasis-data
 
-Self-hosted garage data for the [unustasis app](https://github.com/reunu/unustasis) with upstream tracking and override support.
+Self-hosted service partner garage data for [unustasis](https://github.com/reunu/unustasis).
 
-## Overview
+Tracks upstream data from unumotors.com, applies our overrides, and publishes the result via GitHub Pages at:
 
-This repository hosts service partner garage data with the following features:
+```
+https://reunu.github.io/unustasis-data/garages.json
+```
 
-- **Upstream tracking**: Original data from unumotors.com is fetched and stored in `garages_upstream.json`
-- **Custom overrides**: Our modifications are stored separately in `garages_overrides.json`
-- **Automated merging**: CI automatically applies overrides and publishes the merged result
-- **GitHub Pages hosting**: The final `garages.json` is served at https://reunu.github.io/unustasis-data/garages.json
+## How It Works
 
-## Files
+| File | Purpose |
+|------|---------|
+| `garages_upstream.json` | Original data from unumotors.com (~179 garages) |
+| `garages_overrides.json` | Our modifications (updates, removals, additions) |
+| `merge-overrides.jq` | Merge script: applies overrides to upstream |
+| `garages.json` | Generated output, published via GitHub Pages |
 
-- `garages_upstream.json` - Original garage data from unumotors.com (~140 garages)
-- `garages_overrides.json` - Our custom modifications (currently: updated Wilhelm details)
-- `garages.json` - Generated merged file (published via GitHub Pages)
-
-## CI Automation
-
-The GitHub Actions workflow (`.github/workflows/update-garages.yml`):
-- Runs daily at 3 AM UTC
-- Fetches latest data from unumotors.com
-- Detects changes in upstream data
-- Applies our overrides using jq
-- Commits and pushes updates if changes detected
-- Can be triggered manually via workflow_dispatch
+A weekly CI workflow fetches the latest upstream data, applies overrides, and commits if anything changed. Can also be triggered manually via workflow_dispatch.
 
 ## Override Format
 
-Overrides support three operations: **update**, **remove**, and **add**.
+Three operations, all using a `match` object to identify garages by any field(s):
 
-All operations use a `match` object to identify garages. You can match on any field(s) - commonly `name`, but you can also match on multiple fields for precision (e.g., `name` + `ShippingCity` if names aren't unique).
-
-### Update Existing Garage
-
-Modify information for an existing garage from upstream:
+### Update
 
 ```json
 {
   "operation": "update",
-  "match": {
-    "name": "Fa. Wilhelm Fahrzeugtechnik"
-  },
+  "match": { "name": "Fa. Wilhelm Fahrzeugtechnik" },
   "garage": {
     "name": "Fa. Wilhelm Zweiradtechnik",
     "Phone": "+49 175 222 99 77",
@@ -58,35 +44,22 @@ Modify information for an existing garage from upstream:
 }
 ```
 
-**Multi-field matching example** (when name alone isn't unique):
+Match on multiple fields when names aren't unique:
 
 ```json
-{
-  "operation": "update",
-  "match": {
-    "name": "Scooter Shop",
-    "ShippingCity": "Berlin"
-  },
-  "garage": { /* updated data */ }
-}
+{ "match": { "name": "Scooter Shop", "ShippingCity": "Berlin" } }
 ```
 
-### Remove Garage
-
-Remove a garage that has closed or no longer services unu scooters:
+### Remove
 
 ```json
 {
   "operation": "remove",
-  "match": {
-    "name": "Closed Garage Name"
-  }
+  "match": { "name": "Closed Garage Name" }
 }
 ```
 
-### Add New Garage
-
-Add a garage not present in upstream data:
+### Add
 
 ```json
 {
@@ -106,18 +79,6 @@ Add a garage not present in upstream data:
 }
 ```
 
-## Adding Overrides
-
-1. For **updates** and **removes**: Identify the garage in `garages_upstream.json` and create a `match` object with field(s) to match on
-2. For **adds**: Provide complete garage record in the `garage` field
-3. Add the entry to `garages_overrides.json`
-4. Run the workflow manually or wait for the next scheduled run
-5. The merged `garages.json` will be automatically updated
-
 ## Reporting Outdated Information
 
-If you notice incorrect garage information, please [open an issue](https://github.com/reunu/unustasis-data/issues/new/choose) using the "Outdated Garage Information" template
-
-## License
-
-Data sourced from unumotors.com with custom modifications by reunu.
+Notice incorrect garage details? [Open an issue](https://github.com/reunu/unustasis-data/issues/new/choose) using the "Outdated Garage Information" template.
